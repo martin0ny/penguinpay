@@ -8,7 +8,7 @@ export function formatLocalAmount(
 
   const converted = usdAmount * rate;
 
-  // Try to use Intl if available (Hermes supports this)
+  // Setting locale here ensures we get a consistent format across devices.
   try {
     return converted.toLocaleString("en-US", {
       minimumFractionDigits: 2,
